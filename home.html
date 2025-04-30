@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find Doctors - HealthCare Africa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<?php if (isset($_GET['success'])): ?>
+  <div class="alert success"><?= htmlspecialchars($_GET['success']) ?></div>
+<?php elseif (isset($_GET['error'])): ?>
+  <div class="alert error"><?= htmlspecialchars($_GET['error']) ?></div>
+<?php endif; ?>
+  <nav class="nav-bar">
+    <a href="home.html" class="logo">HealthCare Africa</a>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="logout.php">Logout</a></li>
+    </ul>
+  </nav>
+
+  <main class="hero">
+    <h1>Search for Doctors Near You</h1>
+    <form id="searchForm">
+      <input type="text" id="location" placeholder="Enter your location (e.g., Kampala)" required>
+      <button type="submit" class="btn">Search Doctors</button>
+    </form>
+    <div id="map"></div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap" async defer></script>
+</body>
+</html>

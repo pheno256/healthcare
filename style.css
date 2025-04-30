@@ -1,0 +1,4 @@
+.hero { text-align: center; padding: 50px; font-family: Arial; }
+.btn { padding: 10px 20px; background: teal; color: white; text-decoration: none; border-radius: 5px; }
+.alert.success { background: #d4edda; color: #155724; padding: 10px; text-align: center; }
+.alert.error { background: #f8d7da; color: #721c24; padding: 10px; text-align: center; }
